@@ -1,0 +1,37 @@
+<body align='center'>
+<h1><caption>Shopping</caption></h1><br>
+<div>
+  <table class='table1'>
+      <caption>Cartlog</caption>
+    <tbody>
+      <tr *ngFor='let item of cartlog; let i=index'>
+        item{{i}}<br>
+        {{item.product}}<br>
+        {{item.price}} 
+        <td><button (click)=list(item)>AddtoCart</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+    <table class='table2'>
+      <caption>Cart</caption>
+      <tbody>
+        <tr *ngFor='let item of cart; let i=index'>
+            item{{i}}<br>
+            {{item.product}}<br>
+            {{item.price}}    
+          <td><button (click)=remove(i,item)>remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<br>
+
+
+<div class='order'>
+ <h1> <caption>CheckOut</caption></h1>
+  <h2>totalorder:{{total}}</h2>
+  </div>
+
+  </body>
